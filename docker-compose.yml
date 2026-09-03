@@ -1,0 +1,36 @@
+# 🌊 RPMStream — docker compose
+#
+# The container streams Telegram → RPMShare, so it needs almost no disk:
+#   • /app/work  → only the Pyrogram session file (named volume)
+#   • /tmp       → tiny tmpfs, nothing is ever spooled there
+#
+#   docker compose up -d --build
+
+services:
+  rpmstream:
+    build: .
+    image: rpmstream:latest
+    container_name: rpmstream
+    env_file:
+      - .env
+    environment:
+      # In Docker, logs belong on stdout; `docker compose logs -f` reads them.
+      LOG_TO_FILE: "false"
+    restart: unless-stopped
+    init: true
+    volumes:
+      - rpmstream-session:/app/work
+    tmpfs:
+      - /tmp:size=32M
+    # Comfortable ceiling for a 512 MB VPS while streaming 1 MiB chunks.
+    mem_limit: 512m
+    cpus: 1.0
+    stop_grace_period: 30s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  rpmstream-session:
