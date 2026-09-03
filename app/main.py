@@ -33,7 +33,7 @@ _BANNER = r"""
 ┌──────────────────────────────────────────────────────┐
 │  🌊  R P M S T R E A M                               │
 │      Telegram → RPMShare streaming uploader          │
-│      © Salman Biswas — RPMStream                     │
+│      © Prem — RPMStream                              │
 └──────────────────────────────────────────────────────┘
 """
 
