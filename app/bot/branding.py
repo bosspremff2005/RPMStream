@@ -12,18 +12,12 @@ __all__ = ["CREATOR", "CREATOR_LINKS", "PROJECT_COPYRIGHT", "PROJECT_NAME", "PRO
 
 PROJECT_NAME = "RPMStream"
 PROJECT_TAGLINE = "Telegram → RPMShare Streaming"
-CREATOR = "Salman Biswas"
-PROJECT_COPYRIGHT = "© Salman Biswas — RPMStream"
+CREATOR = "Woojoo"
+PROJECT_COPYRIGHT = "© Prem ChandraVanshi — RPMStream"
 
 #: Official links, in the order the About screen renders them.
 CREATOR_LINKS: tuple[dict[str, str], ...] = (
-    {"label": "👨‍💻 Developer Portfolio", "url": "https://profile.vrozek.xyz/", "short": "🌐 Portfolio"},
-    {"label": "💬 Telegram", "url": "https://t.me/Otakuosenpai", "short": "💬 Telegram"},
-    {"label": "📢 Channel", "url": "https://t.me/salmandevapp", "short": "📢 Channel"},
-    {"label": "🐙 GitHub", "url": "https://github.com/salman-dev-app", "short": "🐙 GitHub"},
-    {"label": "📸 Instagram", "url": "https://www.instagram.com/mdsalman.010", "short": "📸 Instagram"},
-    {"label": "🛍️ Store", "url": "https://vrozek.xyz/", "short": "🛍️ Store"},
-    {"label": "📘 Facebook", "url": "https://facebook.com/salmandevapp", "short": "📘 Facebook"},
+    {"label": "👨‍💻 Developer Profile", "url": "https://t.me/bosspremff", "short": "🌐 Owner"}
 )
 
 
